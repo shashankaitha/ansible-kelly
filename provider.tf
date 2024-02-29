@@ -11,10 +11,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "devsecopsb36tfstate"
+    bucket         = "terraform-state-verito"
     key            = "ansible.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "devsecopsb36-terraform-state-lock"
+    dynamodb_table = "terraform-state-verito-dynamodb"
     encrypt        = true
   }
 }
