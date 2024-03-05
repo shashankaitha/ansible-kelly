@@ -1,4 +1,36 @@
 #Ansible Topics
+
+Setup_Lab
+
+1.Install Ansible:
+    sudo apt-add-repository ppa:ansible/ansible
+    sudo apt update
+    sudo apt install ansible
+
+2. Run the Terraform scripts which generated the inv file.
+
+3. Init the configuration file.
+    ansible-config init --disabled > ansible.cfg
+4. Open config files and make below changes
+    a. Change the inv path /home/ubuntu/ansible-kelly
+        inventory=/home/ubuntu/ansible-kelly
+    b.change remote user
+        remote_user=ubuntu
+    c. Remote Hostchecking
+        host_key_checking=False
+    d. Add private key path
+        private_key_file=/etc/ansible/ansiblekey.pem
+    e. Copy the pemfile to the server through winscp or scp
+
+5. Test out the connectivity
+
+
+
+
+
+
+
+
 1.Adhoc commands
 2. with_items for running iterations.
 3. when condition
@@ -13,12 +45,12 @@
 12. shell & command modules
 13. become_user
 14. get_url and unarchive modules in redis playbook.
-15. serial option select how many machine can run at a time. serial 1 will run  
+15. serial option select how many machine can run at a time. serial 1 will run
     on   one machine only.
 16. lineinfile
 17. Docker Swarm Configuration
 18. Set-fact
-19. --extra-vars ansible_user='ubuntu' 
+19. --extra-vars ansible_user='ubuntu'
 20. fetch
 21. tags
 22. Jinja Templates
