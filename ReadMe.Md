@@ -23,14 +23,7 @@ Setup_Lab
     e. Copy the pemfile to the server through winscp or scp
 
 5. Test out the connectivity
-
-
-
-
-
-
-
-
+--------------------------
 1.Adhoc commands
 2. with_items for running iterations.
 3. when condition
