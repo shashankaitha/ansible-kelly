@@ -1,13 +1,20 @@
 #Ansible Topics
-
+ Create a Bastion Host Ubuntu 20.04 LTS
 Setup_Lab
 
-1.Install Ansible:
+1.Install Ansible & Terraform :
     sudo apt-add-repository ppa:ansible/ansible
     sudo apt update
     sudo apt install ansible
 
+    Terraform:
+
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install terraform
+
 2. Run the Terraform scripts which generated the inv file.
+
 
 3. Init the configuration file.
     ansible-config init --disabled > ansible.cfg
