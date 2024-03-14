@@ -1,0 +1,6 @@
+---
+- name: Playbook to install Nginx on Webservers
+  hosts: pub
+  tasks:
+    - name: Perform Apt update and Install basic packages
+      ansible.builtin.shell: apt update && apt install -y unzip jq net-tools
