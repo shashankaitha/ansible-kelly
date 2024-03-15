@@ -15,3 +15,19 @@
 
     - name: Start nginx Service
       shell: systemctl start nginx
+
+- name: Copy html files
+  copy:
+    src: /home/ubuntu/ansible-kelly/playbooks/index.html
+    dest: /etc/foo.conf/var/www/html/index.nginx-debian.html
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Copy Style.css files
+  copy:
+    src: /home/ubuntu/ansible-kelly/playbooks/style.css
+    dest: /etc/foo.conf/var/www/html/style.css
+    owner: root
+    group: root
+    mode: "0644"
