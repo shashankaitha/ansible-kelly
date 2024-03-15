@@ -15,6 +15,8 @@
 
     - name: Start nginx Service
       shell: systemctl start nginx
+  tags:
+    - nginx
 
 - name: Playbook for Copying files
   hosts: server01
@@ -35,3 +37,6 @@
         owner: root
         group: root
         mode: "0644"
+
+  tags:
+    - files
