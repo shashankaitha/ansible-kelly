@@ -19,7 +19,7 @@
     - nginx
 
 - name: Playbook for Copying files
-  hosts: server01
+  hosts: pub
   become: yes
   tasks:
     - name: copying index.html
@@ -34,6 +34,14 @@
       copy:
         src: /home/ubuntu/ansible-kelly/playbooks/style.css
         dest: /var/www/html/style.css
+        owner: root
+        group: root
+        mode: "0644"
+
+    - name: Copy Script.js files
+      copy:
+        src: /home/ubuntu/ansible-kelly/playbooks/script.js
+        dest: /var/www/html/script.js
         owner: root
         group: root
         mode: "0644"
