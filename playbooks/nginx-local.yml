@@ -3,6 +3,7 @@
   hosts: server01
   become: yes
   gather_facts: yes
+  serial: 1
   tasks:
     - name: Perform Apt update and Install basic packages
       shell: apt update && apt install -y unzip jq net-tools
