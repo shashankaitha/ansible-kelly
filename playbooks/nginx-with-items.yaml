@@ -12,6 +12,6 @@
         group: root
         mode: "0755"
       with_items:
-        - index.html
-        - script.js
-        - style.css
+        - contact.html
+        - test.js
+        - test_1.css
