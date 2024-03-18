@@ -40,6 +40,7 @@
       copy:
         src: /tmp/website-templates/3-col-portfolio/css/3-col-portfolio.css
         dest: /var/www/html/3-col-portfolio.css
+        remote_src: yes
         owner: root
         group: root
         mode: "0644"
