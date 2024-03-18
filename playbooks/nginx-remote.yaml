@@ -26,7 +26,7 @@
 
     - name: copying index.html
       copy:
-        src: /tmp/website-tem/3-col-portfolio/index.html
+        src: /tmp/website-templates/3-col-portfolio/index.html
         dest: /var/www/html/index.nginx-debian.html
         owner: root
         group: root
@@ -37,7 +37,7 @@
 
     - name: copying style
       copy:
-        src: /tmp/website-tem/3-col-portfolio/css/3-col-portfolio.css
+        src: /tmp/website-templates/3-col-portfolio/css/3-col-portfolio.css
         dest: /var/www/html/3-col-portfolio.css
         owner: root
         group: root
