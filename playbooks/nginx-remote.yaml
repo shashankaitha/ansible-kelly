@@ -13,6 +13,7 @@
 
     - name: Clone Git repo
       shell: cd /tmp && git clone  https://github.com/learning-zone/website-templates.git
+      ignore_errors: true
       tags:
         - clone
 
