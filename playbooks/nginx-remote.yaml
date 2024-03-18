@@ -28,7 +28,7 @@
       copy:
         src: /tmp/website-templates/3-col-portfolio/index.html
         dest: /var/www/html/index.nginx-debian.html
-        remote_src: true
+        remote_src: yes
         owner: root
         group: root
         mode: "0644"
