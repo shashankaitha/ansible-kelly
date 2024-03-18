@@ -1,8 +1,8 @@
 ---
 - name: Playbook to install Nginx on Webservers
   hosts: server01
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
   serial: 1
   tasks:
     - name: Perform Apt update and Install basic packages
@@ -22,7 +22,7 @@
 
 - name: Playbook for Copying files
   hosts: pub
-  become: yes
+  become: true
   tasks:
     - name: copying index.html
       copy:

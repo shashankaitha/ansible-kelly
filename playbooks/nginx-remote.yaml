@@ -1,8 +1,8 @@
 ---
 - name: Play book to install nginx
   hosts: pub:!server01
-  gather_facts: yes
-  become: yes
+  gather_facts: true
+  become: true
 
   tasks:
     - name: Perform Apt update and Install basic packages
@@ -28,7 +28,7 @@
       copy:
         src: /tmp/website-templates/3-col-portfolio/index.html
         dest: /var/www/html/index.nginx-debian.html
-        remote_src: yes
+        remote_src: true
         owner: root
         group: root
         mode: "0644"
@@ -40,7 +40,7 @@
       copy:
         src: /tmp/website-templates/3-col-portfolio/css/3-col-portfolio.css
         dest: /var/www/html/3-col-portfolio.css
-        remote_src: yes
+        remote_src: true
         owner: root
         group: root
         mode: "0644"
