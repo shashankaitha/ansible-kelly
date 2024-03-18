@@ -1,6 +1,6 @@
 ---
 - name: Play with_items
-  hosts: pub
+  hosts: server01
   gather_facts: true
   become_user: root
   tasks:
