@@ -1,0 +1,42 @@
+---
+- name: Play book to install nginx
+  hosts: server01
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: Perform Apt update and Install basic packages
+      shell: apt update && apt install -y unzip jq net-tools
+      when: (ansible_facts['distribution'] == "Ubuntu" and ansible_facts['distribution_version'] == '20.04')
+      tags:
+        - update
+
+    - name: Clone Git repo
+      shell: cd /tmp && git clone  https://github.com/learning-zone/website-templates.git
+      tags:
+        - clone
+
+    - name: Install Nginx Server
+      apt: > # Symbol will consider as a single line
+        name=nginx
+        state=present
+      tags:
+        - install
+
+    - name: copying index.html
+      copy:
+        src: /tmp/website-tem/3-col-portfolio/index.html
+        dest: /var/www/html/index.nginx-debian.html
+        owner: root
+        group: root
+        mode: "0644"
+      tags:
+        - index
+
+    - name: copying style
+      copy:
+        src: /tmp/website-tem/3-col-portfolio/css/3-col-portfolio.css
+        dest: /var/www/html/3-col-portfolio.css
+        owner: root
+        group: root
+        mode: "0644"
