@@ -5,13 +5,15 @@
   become_user: root
   tasks:
     - name: Install Redis dependencies
-      apt:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - update
-        - build-essential
-        - tcl
+      # apt:
+      #   name: "{{ item }}"
+      #   state: present
+      # loop:
+      #   - update
+      #   - build-essential
+      #   - tcl
+      shell: apt update && apt install -y build-essential tcl
+
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
     - name: Check Redis Status
