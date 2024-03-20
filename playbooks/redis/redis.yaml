@@ -9,6 +9,7 @@
         name: "{{ item }}"
         state: present
       loop:
+        - update
         - build-essential
         - tcl
       when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
