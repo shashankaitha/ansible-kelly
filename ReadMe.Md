@@ -45,7 +45,7 @@ gathering = smart
 fact_caching_timeout = 60
 fact_caching = redis
 fact_caching_prefix = kelly_ansible_facts_
-fact_caching_connection = 100.26.47.96:6379:0
+fact_caching_connection = 54.234.62.241:6379:0
 --------------------------
 1.Adhoc commands
 2. with_items for running iterations.
