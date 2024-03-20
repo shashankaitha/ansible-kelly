@@ -30,6 +30,22 @@ Setup_Lab
     e. Copy the pemfile to the server through winscp or scp
 
 5. Test out the connectivity
+
+6. Redis installation through ansible and config setup
+
+----
+apt install -y python3-pip
+pip3 install redis
+
+----
+Add below in the ansible.cfg file
+
+
+gathering = smart
+fact_caching_timeout = 60
+fact_caching = redis
+fact_caching_prefix = kelly_ansible_facts_
+fact_caching_connection = 100.26.47.96:6379:0
 --------------------------
 1.Adhoc commands
 2. with_items for running iterations.
