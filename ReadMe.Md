@@ -45,7 +45,15 @@ gathering = smart
 fact_caching_timeout = 60
 fact_caching = redis
 fact_caching_prefix = kelly_ansible_facts_
-fact_caching_connection = 54.234.62.241:6379:0
+fact_caching_connection = 3.218.207.167:6379:0
+
+----
+Commands for redis-cli
+
+connection to DB  redis-cli
+
+keys * : facts
+
 --------------------------
 1.Adhoc commands
 2. with_items for running iterations.
