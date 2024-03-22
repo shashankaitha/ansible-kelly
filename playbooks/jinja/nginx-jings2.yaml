@@ -36,7 +36,7 @@
         dest=/var/www/html/index.nginx-debian.html
         owner=root
         group=root
-        mode=0644
+        mode=0777
       notify: Restart Nginx
       tags:
         - j2
@@ -47,7 +47,7 @@
         dest=/var/www/html/style.css
         owner=root
         group=root
-        mode=0644
+        mode=0777
       notify: Restart Nginx
       tags:
         - style
@@ -58,7 +58,7 @@
         dest=/var/www/html/scorekeeper.js
         owner=root
         group=root
-        mode=0644
+        mode=0777
       notify: Restart Nginx
       tags:
         - js
