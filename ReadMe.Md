@@ -102,5 +102,14 @@ ansible-galaxy init /etc/ansible/roles/nginxinstall --offline
 ----
 Ansible Vault
 
+Creation:
+
+ansible-vault create vault.yaml
+
 Encrypt the data
 
+ ansible-vault encrypt  vault.yaml
+
+ Decrypt data:
+
+ ansible-vault decrypt vault.yaml
