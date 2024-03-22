@@ -19,6 +19,9 @@
        613633643661336132616165303666333731
 
   tasks:
+    - name: Perform Apt update and Install basic packages
+      shell: apt update && apt install -y unzip jq net-tools
+
     - name: install AWS CLI
       shell: |
         curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
