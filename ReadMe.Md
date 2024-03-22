@@ -87,5 +87,20 @@ $Env:AWS_SECRET_ACCESS_KEY="XXX"
 $Env:AWS_REGION="us-east-1"
 
 
+Ansible-Role referenec :
 
+https://www.learnitguide.net/2018/02/ansible-roles-explained-with-examples.html
+
+ansible-galaxy init /etc/ansible/roles/nginxinstall --offline
+
+  - name: Playbook For Testing Role
+    hosts: web
+    roles:
+      - /myproject/roles/nginxinstall
+
+
+----
+Ansible Vault
+
+Encrypt the data
 
